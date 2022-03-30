@@ -1,12 +1,8 @@
-name: A workflow for my Hello World file
+name: hello-world
 on: push
-
 jobs:
-  build:
-    name: Hello world action
+  my-job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: ./action-a
-        with: 
-	  MY_NAME: "Daniel"
+      - name: my-step
+        run: echo "Hello World!"
